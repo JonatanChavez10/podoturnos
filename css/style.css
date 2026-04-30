@@ -1,0 +1,88 @@
+header{
+    background-color: beige;
+    background-image: url('/Imagenes/podologia.jpg');
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;              /* activa flexbox */
+    flex-direction: column;     /* organiza en columna */
+    justify-content: space-between; /* título arriba y nav abajo */
+    align-items: center;        /* centra horizontalmente */
+}
+
+nav {
+    margin-bottom: 15px; /* separa el nav del borde inferior */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#TituloHeder {
+    color: azure;
+    font-size: 40px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+}
+
+#Contacto{
+    text-align: right;
+}
+
+#Ubicacion{
+    text-align: center;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    
+    background-color: transparent;
+    color: rgb(33, 155, 226);
+    border: 2px solid rgb(39, 178, 190);
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color:rgb(14, 142, 216);
+    color: black;
+}
+
+#InfoPodologa{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 10px;
+    max-width: 100%;
+}
+
+#InfoPodologa img {
+    width: 200px;          /* tamaño fijo */
+    height: auto;
+    border-radius: 8px;
+}
+
+#TextoInfoPodo {
+    font-family: Arial, sans-serif;
+    margin: 0;             /* evita que se desplace demasiado */
+}
+footer{
+    margin: auto;
+}
