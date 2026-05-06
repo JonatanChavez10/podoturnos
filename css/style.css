@@ -7,7 +7,7 @@
     font-style: normal;
 }
 header{
-    background-image: url('/Imagenes/podologia.jpg');
+    background-image: url('../Imagenes/podologia.jpg');
     background-size: cover;     
     background-position: center 30%; 
     background-repeat: no-repeat;
