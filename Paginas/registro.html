@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Limelight&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="Contenedor_logo">
+
+            <img src="/Imagenes/logo.png" width="200">
+
+        </div>
+        <nav class="Contenedor_menu">
+            <ul class="Menu">
+
+                <li><a href="#" class="Menu__link menu__link--destacado">Pedir un Turnito</a></li>
+                <li><a href="#" class="Menu__link">Sobre nosotros</a></li>
+                <li><a href="#" class="Menu__link">Los escuchamos</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form method="post" action="https://formspree.io/f/xaqvjdea">
+                <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
+                <label for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" required>
+                <label for="apellido">Apellido:</label><input type="text" id="apellido" name="apellido" required>
+                <label for="fechaNacimiento">Fecha de nacimiento:</label><input type="date" id="fechaNacimiento"
+                    name="fechaNacimiento" required>
+                <label for="telefono">Telefono:</label><input type="tel" id="telefono" name="telefono" required>
+                <label for="correo">Correo electronico:</label><input type="email" id="correo" name="correo" required>
+                <label for="direccion">Direccion:</label><input type="text" id="direccion" name="direccion" required>
+                <p>¿Es diabetica?</p>
+                <input type="radio" id="diabetes_si" name="diabetes" value="si" required><label
+                    for="diabetes_si">si</label>
+                <input type="radio" id="diabetes_no" name="diabetes" value="no" required><label
+                    for="diabetes_no">no</label>
+                <label for="enfermedades">Alguna enfermedad:</label><textarea id="enfermedades" name="enfermedades"
+                    rows="5" cols="30"></textarea>
+                <input type="submit" name="enviar" value="Enviar">
+
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <div class="Ubicacion_consultorio">
+            <h3 class="Ubicacion_consultorio_titulo">Ubicacion</h3>
+            <iframe class="Ubicacion_consultorio_mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.39168539645226!2d-58.810558196940406!3d-34.54679541060669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97c4885ce3ed%3A0x20081d88334b9212!2sPodologia%20blanca!5e0!3m2!1ses!2sar!4v1775570285850!5m2!1ses!2sar"
+                width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+        <div class="Contacto_profesional">
+            <h3 class="Contacto_profesional_titulo">Contacto</h3>
+
+            <p>
+
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/5491160120099" target="_blank" class="footer__link-wa">1160120099</a>
+            </p>
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="maite=blancaadiazherrera@gmail.com" target="_blank">blancaadiazherrera@gmail.com</a>
+            </p>
+
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
