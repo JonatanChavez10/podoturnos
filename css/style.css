@@ -8,44 +8,28 @@
 }
 header{
     background-image: url('/Imagenes/podologia.jpg');
-    background-size: cover;      /* Clave: ajusta la foto al ancho del header */
-    background-position: center 30%; /* Muestra el centro de la foto */
+    background-size: cover;     
+    background-position: center 30%; 
     background-repeat: no-repeat;
     
-    min-height: 180px;           /* Dale un alto mínimo para que respire */
     display: flex;
-    flex-direction: column;      /* Para que el logo y el menú se apilen */
-    justify-content: space-between;
-    
-   
-}
-.Contenedor_logo{
-    display: flex;
-    align-items: center;
-    height: 170px;
+    flex-direction: column;          
 }
 
-.Contenedor_logo img {
-    /* 1. Definí un tamaño más grande. Probá este valor. */
-    width: 250px; 
-    
-    /* 2. Clave: esto asegura que la imagen crezca sin deformarse. */
-    height: auto; 
-    
-    /* 3. Un poco de espacio extra a la izquierda para que no toque el borde de la pantalla */
+.Contenedor_logo{ 
     margin-left: 20px;
 }
-/* Limpiamos la lista del nav */
+
 .Menu {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 0;
+    padding: 10px;
 }
 
-/* Estilo base para todos los enlaces del menú */
+
 .Menu__link {
    display: inline-block; /* Permite que el botón tenga ancho y alto */
     text-decoration: none; /* ¡Acá quitamos la barrita de abajo! */
@@ -55,7 +39,7 @@ header{
     transition: 0.3s;      /* Hace que el cambio de color sea suave */
     
     /* Colores base */
-    background-color: #f0f0f0; 
+    background-color: #e9e5dd; 
     color: #093f6b;
 }
 
@@ -75,37 +59,62 @@ header{
     padding: 0 20px;   /* Evita que toque los bordes laterales en celulares */
 }
 
-/* LA FOTO: Redondeado y tamaño */
+
 .Perfil_profesional_img {
-    width: 350px;       /* Un poco más grande para que se luzca */
-    height: auto;
-    border-radius: 5px; /* Esquinas suavizadas */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Sombra muy sutil */
+    width: 350px;       
+    border-radius: 5px;
 }
 .Menu__link:hover {
-    background-color: #18cac1; /* El violeta que ya usabas */
-    color: white;              /* El texto cambia a blanco para que se lea */
-    transform: scale(1.05);    /* Se agranda un poquito, dando feedback */
+    background-color: #18cac1; 
+    color: white;             
+    transform: scale(1.05);   
 }
 
-/* EL BOTÓN PRINCIPAL (Pedir un Turnito) */
+.Contenedor_Servicios{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+    padding: 100px;
+}
+
+main img {
+    width: 200px;       
+    border-radius: 5px
+}
+
+.cajaServicio{
+
+    display: flex;
+    flex-direction: column; /* Alinea contenido de la tarjeta en vertical */
+    flex: 1 1 300px;        /* Permite que crezcan y ocupen el espacio parejo */
+    min-height: 100%;       /* Asegura que ocupen todo el alto del padre */
+
+}
+
+
 
 .footer__link-wa {
     text-decoration: none;
-    color: #333; /* Color por defecto */
+    color: #333; 
     font-size: 1.2rem;
-    /*display: flex;*/
     align-items: center;
-    gap: 10px; /* Separa el icono del texto */
+    gap: 10px; 
 }
 
-/* Para que el icono de WhatsApp sea verde cuando pases el mouse */
+
 .footer__link-wa:hover .fa-whatsapp {
     color: #25d366;
 }
 
-/* Para que el sobre sea de otro color al pasar el mouse */
+
 .footer__link-wa:hover .fa-envelope {
     color: #007bff;
+}
+footer{
+    background-color: #27F5DA;
+    display: flex;
+    gap: 100px;
+    padding: 20px;
 }
 
