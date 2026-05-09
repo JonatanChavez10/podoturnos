@@ -201,3 +201,65 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* --- RESPONSIVE DESIGN (PARA CELULARES) --- */
+
+@media (max-width: 768px) {
+    
+    /* 1. Ajuste General de Espacios */
+    .Contenedor_Perfil_profesional, 
+    .Contenedor_Servicios {
+        padding: 40px 15px; /* Reducimos el padding gigante de 100px a algo cómodo para el dedo */
+    }
+
+    /* 2. El Perfil de Blanca: De horizontal a vertical */
+    .Perfil_profesional {
+        flex-direction: column; /* La imagen arriba y el texto abajo */
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .Perfil_profesional_img {
+        width: 200px;  /* Imagen más chica para que entre bien */
+        height: 200px;
+    }
+
+    /* 3. Menú: Para que no se amontone */
+    .Menu {
+        flex-wrap: wrap; /* Si no entran los botones, se bajan solos */
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .Menu__link {
+        padding: 8px 15px;
+        font-size: 0.9rem; /* Achicamos un pelín la letra */
+    }
+
+    /* 4. Servicios y Beneficios: Una sola columna */
+    .Contenedor_Servicios, 
+    .beneficios {
+        padding: 40px 20px;
+        justify-content: center;
+    }
+
+    .cajaServicio, 
+    .beneficio-card {
+        flex: 1 1 100%; /* Obligamos a que ocupen todo el ancho del celu */
+        max-width: 100%;
+    }
+
+    /* 5. El Footer: Arreglamos las columnas amontonadas */
+    .datos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .Ubicacion_consultorio_mapa {
+        width: 100%; /* El mapa ocupa todo el ancho disponible */
+        max-width: 300px;
+    }
+}
+
