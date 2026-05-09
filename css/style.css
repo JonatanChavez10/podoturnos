@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,20 +6,14 @@
     font-weight: 400;
     font-style: normal;
 }
-header{
+
+.banner {
     background-image: url('../Imagenes/podologia.jpg');
-    background-size: cover;     
-    background-position: center 30%; 
+    background-size: cover;
+    background-position: center 30%;
     background-repeat: no-repeat;
-    
-    display: flex;
-    flex-direction: column;          
+    height: 250px;
 }
-
-.Contenedor_logo{ 
-    margin-left: 20px;
-}
-
 .Menu {
     list-style: none;
     display: flex;
@@ -27,125 +21,182 @@ header{
     justify-content: center;
     gap: 20px;
     padding: 10px;
+    background-color: #60d7e7;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque muy moderno */
+    padding: 15px 0;
 }
 
 
 .Menu__link {
-   display: inline-block; /* Permite que el botón tenga ancho y alto */
-    text-decoration: none; /* ¡Acá quitamos la barrita de abajo! */
-    padding: 10px 20px;    /* El "relleno" que le da forma de botón */
-    border-radius: 25px;   /* Bordes redondeados (estilo amigable) */
+    display: inline-block;
+    /* Permite que el botón tenga ancho y alto */
+    text-decoration: none;
+    /* ¡Acá quitamos la barrita de abajo! */
+    padding: 10px 20px;
+    /* El "relleno" que le da forma de botón */
+    border-radius: 25px;
+    /* Bordes redondeados (estilo amigable) */
     font-weight: bold;
-    transition: 0.3s;      /* Hace que el cambio de color sea suave */
+    transition: 0.3s;
+    /* Hace que el cambio de color sea suave */
     
     /* Colores base */
-    background-color: #e9e5dd; 
+    background-color: #e9e5dd;
     color: #093f6b;
 }
 
+.Menu__link:hover{
+    background-color: #18cac1;
+    color: white;
+    transform: translateY(-10px);
+}
+/* EL PADRE: Maneja el fondo de toda la franja y el espacio con el menú */
+.Contenedor_Perfil_profesional {
+    width: 100%;
+    background-color: #aafab1; /* Gris muy suave para dar contraste */
+    padding: 100px 0;          /* ESTO lo separa del menú (arriba) y de servicios (abajo) */
+    display: flex;             /* Ayuda a centrar al hijo */
+    justify-content: center;
+}
+
+/* EL HIJO: El "simil cuadrado" cian */
 .Perfil_profesional {
     display: flex;
     align-items: center;
-    gap: 40px; /* Espacio entre la foto y el texto */
+    gap: 40px;
     
-    /* 
-       Damos un margen vertical generoso. 
-       80px arriba para alejarlo del encabezado con el bisturí.
-       100px abajo para que no se pegue al mapa de ubicación.
-    */
-    margin: 80px auto 100px auto; 
-    background-color: #f8f9fa;
-    max-width: 1200px; /* Para que en pantallas gigantes no se desparrame */
-    padding: 0 20px;   /* Evita que toque los bordes laterales en celulares */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    max-width: 1100px;         /* Ancho máximo de la tarjeta */
+    width: 90%;                /* Para que no toque los bordes en pantallas chicas */
+    
+    background-color: #65fff7; /* Tu color de identidad */
+    padding: 50px;             /* Espacio interno para que el contenido respire */
+    border-radius: 25px;       /* Bordes redondeados modernos */
+    
+    /* Sombra y borde fino */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
-
+.Perfil_profesional_img {
+    width: 250px;       /* Ajustalo a tu gusto */
+    height: 250px;
+    object-fit: cover;  /* Esto evita que la foto se deforme */
+    border-radius: 15px; /* Un poquito de redondeo para que haga juego */
+}
 
 .Perfil_profesional_img {
-    width: 350px;       
-    border-radius: 5px;
-}
-.Menu__link:hover {
-    background-color: #18cac1; 
-    color: white;             
-    transform: scale(1.05);   
+    width: 280px; 
+    height: 280px;
+    object-fit: cover; /* Clave para que no se estire */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.Contenedor_Servicios{
+.Contenedor_Servicios {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
     gap: 20px;
     padding: 100px;
+    justify-content: space-evenly;
+    border-top: 5px solid rgba(7, 0, 0, 0.05);
+    background-color: #caf1cd;
 }
 
-main img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;       
-    border-radius: 5px
-}
-
-.cajaServicio{
+.cajaServicio {
 
     display: flex;
-    flex-direction: column; /* Alinea contenido de la tarjeta en vertical */
-    flex: 1 1 300px;        /* Permite que crezcan y ocupen el espacio parejo */
-    min-height: 100%; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);      /* Asegura que ocupen todo el alto del padre */
-
+    flex-direction: column;
+    /* Alinea contenido de la tarjeta en vertical */
+    flex: 1 1 300px;
+    /* Permite que crezcan y ocupen el espacio parejo */
+    min-height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Asegura que ocupen todo el alto del padre */
+    background-color:  #65fff7;
+    border-radius: 5px
 }
+main img {
+    width: 100%;
+    height: 180px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Recorta la imagen para que no se deforme */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
 
 .beneficios {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Para que en el celu se pongan uno abajo del otro */
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 40px;
-    background-color: #f9f9f9;
+    align-items: stretch;
+    border-top: 5px solid rgba(7, 0, 0, 0.05);
+    background-color: #aafab1;
+    
 }
 
 .beneficio-card {
-    flex: 1 1 250px; /* Tamaño flexible */
+    /* En lugar de flex: 1, usamos un ancho fijo pero flexible */
+    flex: 0 1 300px; 
+    
+    display: flex;
+    flex-direction: column; /* Alinea contenido en vertical */
+    justify-content: space-evenly; /* Empuja el texto hacia abajo de forma pareja */
+    
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(4, 124, 133, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #65fff7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    
+    /* Para que el borde no se vea tan fuerte si lo tenés */
+    border: none;
 }
 
-footer{
+footer {
     display: flex;
-    flex-direction: column; /* Esto los pone uno arriba del otro */
-    align-items: center;    /* Centra ambos bloques horizontalmente */
+    flex-direction: column;
+    /* Esto los pone uno arriba del otro */
+    align-items: center;
+    /* Centra ambos bloques horizontalmente */
     padding: 40px 20px;
-    background-color: #2c3e50; /* Probá este color más oscuro, ¡va a resaltar más! */
+    background-color: #2c3e50;
+    /* Probá este color más oscuro, ¡va a resaltar más! */
     color: white;
     gap: 30px;
 }
-.datos{
+
+.datos {
     display: flex;
-    justify-content: space-around; /* Si adentro tenés varias columnas, esto las separa */
+    justify-content: space-around;
+    /* Si adentro tenés varias columnas, esto las separa */
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
 
 }
-.derechoAutor{
+
+.derechoAutor {
     width: 100%;
-    text-align: center;    /* Centra el texto del copyright */
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Una línea sutil para separar */
+    text-align: center;
+    /* Centra el texto del copyright */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Una línea sutil para separar */
     padding-top: 20px;
     font-size: 0.9rem;
 
 }
 
 footer a {
-    color: #1abc9c; /* O blanco */
+    color: #1abc9c;
+    /* O blanco */
     text-decoration: none;
 }
+
 footer a:hover {
     text-decoration: underline;
 }
