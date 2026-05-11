@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <section class="banner">
+            <div>
+
+                <img src="../Imagenes/logo.png" width="400">
+
+            </div>
+        </section>
+        <section class="Contenedor_menu">
+            <nav>
+                <ul class="Menu">
+
+                    <li><a href="Paginas/pedirTurno.html" class="Menu__link">Turnos</a></li>
+                    <li><a href="#Sobre_Nosotros" class="Menu__link">Sobre nosotros</a></li>
+                    <li><a href="#Contacto" class="Menu__link">Contactanos</a></li>
+                    <li><a href="#Nuestros_Servicios" class="Menu__link">Nuestros servicios</a></li>
+                    <li><a href="#" class="Menu__link">Preguntas frecuentes</a></li>
+
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h1>
+                    ¿Actualmente esta registrado?
+                </h1>
+            </div>
+            <div>
+                <input type="submit" value="SI">
+                <input type="submit" value="NO">
+            </div>
+        </section>
+        <section class="Contenedor_formulario">
+            <form method="post" action="https://formspree.io/f/xaqvjdea">
+                <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
+                <label for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" required>
+                <label for="apellido">Apellido:</label><input type="text" id="apellido" name="apellido" required>
+                <label for="fechaNacimiento">Dia de atencion:</label><input type="date" id="fechaNacimiento"
+                    name="fechaNacimiento" required>
+                <label for="DNI">DNI:</label><input type="tel" id="DNI" name="DNI" required>
+                <label for="direccion">Direccion:</label><input type="text" id="direccion" name="direccion" required>
+                
+                <input type="submit" name="enviar" value="Enviar">
+
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <section class="datos">
+            <div class="Ubicacion_consultorio">
+                <h3 class="Ubicacion_consultorio_titulo">Ubicacion</h3>
+                <iframe class="Ubicacion_consultorio_mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.39168539645226!2d-58.810558196940406!3d-34.54679541060669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97c4885ce3ed%3A0x20081d88334b9212!2sPodologia%20blanca!5e0!3m2!1ses!2sar!4v1775570285850!5m2!1ses!2sar"
+                    width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <div class="Contacto_profesional" id="Contacto">
+                <h3 class="Contacto_profesional_titulo">Contacto</h3>
+
+                <p>
+
+                    <i class="bi bi-whatsapp text-success" style="font-size: 2rem;"></i>
+                    <a href="https://wa.me/5491160120099" target="_blank" class="footer__link-wa">1160120099</a>
+                </p>
+                <p>
+                    <i class="bi bi-envelope"></i>
+                    <a href="mailto:blancaadiazherrera@gmail.com" target="_blank">blancaadiazherrera@gmail.com</a>
+                </p>
+
+            </div>
+            <div>
+                <h3>Horarios</h3>
+                <p>Lun a Vie: 09:00 - 12:00 y 15:00 - 18-00</p>
+                <p>Sábados: 09:00 - 18:00</p>
+            </div>
+            </div>
+        </section>
+        <section class="derechoAutor">
+            <div>
+                <p>&copy; 2026 Jonatan Chavez</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

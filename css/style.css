@@ -5,14 +5,15 @@
     font-family: "Limelight", sans-serif;
     font-weight: 400;
     font-style: normal;
-    
+
 }
 
 .banner img {
-        width: 80%; /* Que el logo no ocupe todo el ancho */
-        max-width: 250px;
-        height: auto;
-    }
+    width: 80%;
+    /* Que el logo no ocupe todo el ancho */
+    max-width: 250px;
+    height: auto;
+}
 
 .banner {
     background-image: url('../Imagenes/podologia.jpg');
@@ -22,8 +23,9 @@
     justify-content: center;
     height: 180px;
     align-items: center;
-    
+
 }
+
 .Menu {
     list-style: none;
     display: flex;
@@ -33,7 +35,8 @@
     gap: 20px;
     padding: 10px;
     background-color: #60d7e7;
-    backdrop-filter: blur(5px); /* Efecto de desenfoque muy moderno */
+    backdrop-filter: blur(5px);
+    /* Efecto de desenfoque muy moderno */
     padding: 15px 0;
 }
 
@@ -56,17 +59,21 @@
     color: #0343CE;
 }
 
-.Menu__link:hover{
+.Menu__link:hover {
     background-color: #18cac1;
     color: white;
     transform: translateY(-10px);
 }
+
 /* EL PADRE: Maneja el fondo de toda la franja y el espacio con el menú */
 .Contenedor_Perfil_profesional {
     width: 100%;
-    background-color: #f5f4f3; /* Gris muy suave para dar contraste */
-    padding: 100px 0;          /* ESTO lo separa del menú (arriba) y de servicios (abajo) */
-    display: flex;             /* Ayuda a centrar al hijo */
+    background-color: #f5f4f3;
+    /* Gris muy suave para dar contraste */
+    padding: 100px 0;
+    /* ESTO lo separa del menú (arriba) y de servicios (abajo) */
+    display: flex;
+    /* Ayuda a centrar al hijo */
     justify-content: center;
     text-align: center;
 }
@@ -76,32 +83,42 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    
-    
-    max-width: 1100px;         /* Ancho máximo de la tarjeta */
-    width: 90%;                /* Para que no toque los bordes en pantallas chicas */
-    
-    background-color: #FFF3E6ff7; /* Tu color de identidad */
-    padding: 50px;             /* Espacio interno para que el contenido respire */
-    border-radius: 25px;       /* Bordes redondeados modernos */
-    
+
+
+    max-width: 1100px;
+    /* Ancho máximo de la tarjeta */
+    width: 90%;
+    /* Para que no toque los bordes en pantallas chicas */
+
+    background-color: ;
+    /* Tu color de identidad */
+    padding: 50px;
+    /* Espacio interno para que el contenido respire */
+    border-radius: 25px;
+    /* Bordes redondeados modernos */
+
     /* Sombra y borde fino */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.05);
-}
-.Perfil_profesional_img {
-    width: 250px;       /* Ajustalo a tu gusto */
-    height: 250px;
-    object-fit: cover;  /* Esto evita que la foto se deforme */
-    border-radius: 15px; /* Un poquito de redondeo para que haga juego */
 }
 
 .Perfil_profesional_img {
-    width: 280px; 
-    height: 280px;
-    object-fit: cover; /* Clave para que no se estire */
+    width: 250px;
+    /* Ajustalo a tu gusto */
+    height: 250px;
+    object-fit: cover;
+    /* Esto evita que la foto se deforme */
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    /* Un poquito de redondeo para que haga juego */
+}
+
+.Perfil_profesional_img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    /* Clave para que no se estire */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .Contenedor_Servicios {
@@ -125,15 +142,18 @@
     /* Permite que crezcan y ocupen el espacio parejo */
     min-height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+
     /* Asegura que ocupen todo el alto del padre */
-    background-color:  #feffff;
+    background-color: #feffff;
     border-radius: 5px
 }
+
 main img {
     width: 100%;
-    height: 180px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Recorta la imagen para que no se deforme */
+    height: 180px;
+    /* Altura fija para las imágenes */
+    object-fit: cover;
+    /* Recorta la imagen para que no se deforme */
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -148,24 +168,26 @@ main img {
     align-items: stretch;
     border-top: 5px solid rgba(7, 0, 0, 0.05);
     background-color: #f8f7f5;
-    
+
 }
 
 .beneficio-card {
     /* En lugar de flex: 1, usamos un ancho fijo pero flexible */
-    flex: 0 1 300px; 
-    
+    flex: 0 1 300px;
+
     display: flex;
-    flex-direction: column; /* Alinea contenido en vertical */
-    justify-content: space-evenly; /* Empuja el texto hacia abajo de forma pareja */
-    
+    flex-direction: column;
+    /* Alinea contenido en vertical */
+    justify-content: space-evenly;
+    /* Empuja el texto hacia abajo de forma pareja */
+
     text-align: center;
     padding: 25px;
     border-radius: 15px;
     background-color: #fdfaf7;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
-    
+
+
     /* Para que el borde no se vea tan fuerte si lo tenés */
     border: none;
 }
@@ -215,31 +237,68 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.Contenedor_formulario{
+    background-image: url('../Imagenes/Imagen\ de\ fondo.png'); /* O un color */
+    background-size: cover;
+    display: flex;            /* 1. Activamos el modo Flexbox */
+    justify-content: center;  /* 2. Centra de forma horizontal (izquierda a derecha) */
+    align-items: center;      /* 3. Centra de forma vertical (arriba a abajo) */
+    min-height: 100vh;        /* 4. Le damos altura a la sección (toda la pantalla) */
+}
+
+.Contenedor_formulario form{
+    display: flex;            /* Activamos flex dentro del formulario */
+    flex-direction: column;   /* ¡Clave! Esto pone los ítems uno debajo del otro */
+    gap: 15px;                /* Crea espacio entre cada campo sin usar margin */
+    width: 900px;             /* Le damos un ancho para que no ocupe toda la pantalla */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    
+    /* 2. EL TRUCO: Desenfoca lo que está detrás del cuadro */
+    backdrop-filter: blur(10px); 
+    
+    /* 3. Estética opcional para que parezca un cuadro real */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.opcion_radio{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 /* --- RESPONSIVE DESIGN (PARA CELULARES) --- */
 
 @media (max-width: 768px) {
+
     /* Esto hace que el fondo verde cubra TODO de borde a borde */
-    .Contenedor_Perfil_profesional, 
-    .Contenedor_Servicios, 
+    .Contenedor_Perfil_profesional,
+    .Contenedor_Servicios,
     .beneficios {
         width: 100%;
-        display: block; /* Cambiamos a block para que el contenido empuje el fondo hacia abajo */
-        padding: 50px 0; 
-        overflow: hidden; /* Evita que cosas raras se salgan por los costados */
+        display: block;
+        /* Cambiamos a block para que el contenido empuje el fondo hacia abajo */
+        padding: 50px 0;
+        overflow: hidden;
+        /* Evita que cosas raras se salgan por los costados */
     }
 
     /* 2. Arreglar el cuadro de Blanca (el que se ve mal en la foto) */
     .Perfil_profesional {
-        flex-direction: column; /* La foto arriba, el texto abajo */
+        flex-direction: column;
+        /* La foto arriba, el texto abajo */
         align-items: center;
         width: 90%;
-        margin: 0 auto; /* Centra el cuadro cian en la pantalla */
+        margin: 0 auto;
+        /* Centra el cuadro cian en la pantalla */
         padding: 20px;
     }
 
     .Perfil_profesional_texto {
         width: 100%;
-        text-align: center; /* Centramos el texto para que no quede pegado a la derecha */
+        text-align: center;
+        /* Centramos el texto para que no quede pegado a la derecha */
         margin-top: 20px;
     }
 
@@ -248,4 +307,6 @@ footer a:hover {
         max-width: 200px;
         height: auto;
     }
+
+
 }
