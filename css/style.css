@@ -2,311 +2,670 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Limelight", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
+    font-family: 'Poppins', sans-serif;
 }
 
-.banner img {
-    width: 80%;
-    /* Que el logo no ocupe todo el ancho */
-    max-width: 250px;
+body {
+    background-color: #f7fbfc;
+    color: #1f2937;
+}
+
+/* =========================
+   HEADER / BANNER
+========================= */
+
+.banner {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.65),
+            rgba(255, 255, 255, 0.65)),
+        url('../Imagenes/podologia.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 260px;
     height: auto;
 }
 
-.banner {
-    background-image: url('../Imagenes/podologia.jpg');
-    background-size: cover;
-    background-position: center 30%;
-    background-repeat: no-repeat;
+.banner-contenido {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    display: flex;
+
     justify-content: center;
-    height: 180px;
+
     align-items: center;
 
+    gap: 120px;
+
+    padding: 0 40px;
 }
+
+.redes-superior {
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.redes-superior a {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.25);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #143b63;
+
+    font-size: 18px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.redes-superior a:hover {
+
+    background-color: #57d4e5;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   MENU
+========================= */
 
 .Menu {
     list-style: none;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 10px;
-    background-color: #60d7e7;
-    backdrop-filter: blur(5px);
-    /* Efecto de desenfoque muy moderno */
-    padding: 15px 0;
+
+    gap: 35px;
+
+    background-color: #57d4e5;
+
+    padding: 20px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-
 .Menu__link {
-    display: inline-block;
-    /* Permite que el botón tenga ancho y alto */
     text-decoration: none;
-    /* ¡Acá quitamos la barrita de abajo! */
-    padding: 10px 20px;
-    /* El "relleno" que le da forma de botón */
-    border-radius: 25px;
-    /* Bordes redondeados (estilo amigable) */
-    font-weight: bold;
-    transition: 0.3s;
-    /* Hace que el cambio de color sea suave */
-    font-size: 14px;
-    /* Colores base */
-    background-color: #e9e5dd;
-    color: #0343CE;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    transition: all 0.3s ease;
 }
 
 .Menu__link:hover {
-    background-color: #18cac1;
-    color: white;
-    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.20);
+
+    transform: translateY(-2px);
 }
 
-/* EL PADRE: Maneja el fondo de toda la franja y el espacio con el menú */
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    background-image: url('../Imagenes/fondo-podologia-suave.png');
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+body {
+    background-color: #f7fbfc;
+    color: #1f2937;
+    overflow-x: hidden;
+}
+
+/* =========================
+   HERO / PERFIL
+========================= */
+
 .Contenedor_Perfil_profesional {
-    width: 100%;
-    background-color: #f5f4f3;
-    /* Gris muy suave para dar contraste */
-    padding: 100px 0;
-    /* ESTO lo separa del menú (arriba) y de servicios (abajo) */
     display: flex;
-    /* Ayuda a centrar al hijo */
     justify-content: center;
-    text-align: center;
+
+    padding: 70px 20px;
 }
 
-/* EL HIJO: El "simil cuadrado" cian */
 .Perfil_profesional {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
 
+    max-width: 1200px;
+    width: 100%;
 
-    max-width: 1100px;
-    /* Ancho máximo de la tarjeta */
-    width: 90%;
-    /* Para que no toque los bordes en pantallas chicas */
-
-    background-color: ;
-    /* Tu color de identidad */
     padding: 50px;
-    /* Espacio interno para que el contenido respire */
-    border-radius: 25px;
-    /* Bordes redondeados modernos */
 
-    /* Sombra y borde fino */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: white;
+
+    border-radius: 30px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
 
 .Perfil_profesional_img {
-    width: 250px;
-    /* Ajustalo a tu gusto */
-    height: 250px;
+    width: 320px;
+    height: 320px;
+
     object-fit: cover;
-    /* Esto evita que la foto se deforme */
-    border-radius: 15px;
-    /* Un poquito de redondeo para que haga juego */
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
 }
 
-.Perfil_profesional_img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    /* Clave para que no se estire */
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.Perfil_profesional_texto {
+    flex: 1;
 }
+
+.Perfil_profesional_texto h2 {
+    font-size: 42px;
+
+    color: #143b63;
+
+    margin-bottom: 25px;
+
+    line-height: 1.2;
+}
+
+.Perfil_profesional_texto p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #555;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
 
 .Contenedor_Servicios {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    padding: 100px;
-    justify-content: space-evenly;
-    border-top: 5px solid rgba(7, 0, 0, 0.05);
-    background-color: #32E7FB;
-}
+    max-width: 1300px;
 
-.cajaServicio {
+    margin: 0 auto;
 
-    display: flex;
-    flex-direction: column;
-    /* Alinea contenido de la tarjeta en vertical */
-    flex: 1 1 300px;
-    /* Permite que crezcan y ocupen el espacio parejo */
-    min-height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    /* Asegura que ocupen todo el alto del padre */
-    background-color: #feffff;
-    border-radius: 5px
-}
-
-main img {
-    width: 100%;
-    height: 180px;
-    /* Altura fija para las imágenes */
-    object-fit: cover;
-    /* Recorta la imagen para que no se deforme */
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-
-.beneficios {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 40px;
-    align-items: stretch;
-    border-top: 5px solid rgba(7, 0, 0, 0.05);
-    background-color: #f8f7f5;
 
+    gap: 30px;
+
+    padding: 30px 20px 80px;
+}
+
+.titulo-seccion {
+
+    text-align: center;
+
+    padding: 40px 20px 10px;
+}
+
+.titulo-seccion h2 {
+
+    font-size: 42px;
+
+    color: #143b63;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+}
+
+.titulo-seccion p {
+
+    font-size: 18px;
+
+    color: #6b7280;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    line-height: 1.7;
+}
+
+.cajaServicio {
+    background-color: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+
+    flex: 1 1 300px;
+
+    max-width: 350px;
+
+    text-align: center;
+
+    padding-bottom: 25px;
+}
+
+.cajaServicio:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cajaServicio h2 {
+    font-size: 22px;
+
+    padding: 20px 15px 10px;
+
+    color: #143b63;
+}
+
+.cajaServicio p {
+    padding: 0 20px;
+
+    line-height: 1.7;
+
+    color: #555;
+
+    font-size: 15px;
+}
+
+.cajaServicio img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.servicio-link {
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.beneficios {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 20px 20px 80px;
 }
 
 .beneficio-card {
-    /* En lugar de flex: 1, usamos un ancho fijo pero flexible */
-    flex: 0 1 300px;
+    background-color: white;
 
-    display: flex;
-    flex-direction: column;
-    /* Alinea contenido en vertical */
-    justify-content: space-evenly;
-    /* Empuja el texto hacia abajo de forma pareja */
+    border-radius: 20px;
+
+    padding: 35px;
+
+    flex: 1 1 300px;
 
     text-align: center;
-    padding: 25px;
-    border-radius: 15px;
-    background-color: #fdfaf7;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 
-    /* Para que el borde no se vea tan fuerte si lo tenés */
-    border: none;
+    transition: 0.3s ease;
 }
 
+.beneficio-card:hover {
+    transform: translateY(-5px);
+}
+
+.icono-clase {
+    font-size: 40px;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+.beneficio-card h3 {
+    margin-bottom: 15px;
+
+    color: #143b63;
+}
+
+.beneficio-card p {
+    line-height: 1.7;
+
+    color: #555;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
-    display: flex;
-    flex-direction: column;
-    /* Esto los pone uno arriba del otro */
-    align-items: center;
-    /* Centra ambos bloques horizontalmente */
-    padding: 40px 20px;
-    background-color: #2c3e50;
-    /* Probá este color más oscuro, ¡va a resaltar más! */
+    background-color: #16344f;
+
     color: white;
-    gap: 30px;
+
+    padding: 60px 20px 20px;
 }
 
 .datos {
-    display: flex;
-    justify-content: space-around;
-    /* Si adentro tenés varias columnas, esto las separa */
-    width: 100%;
     max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 
+    gap: 40px;
 }
 
-.derechoAutor {
-    width: 100%;
-    text-align: center;
-    /* Centra el texto del copyright */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    /* Una línea sutil para separar */
-    padding-top: 20px;
-    font-size: 0.9rem;
+footer h3 {
+    margin-bottom: 20px;
 
+    font-size: 22px;
+}
+
+footer p {
+    margin-bottom: 10px;
+
+    line-height: 1.7;
 }
 
 footer a {
-    color: #e6f1ef;
-    /* O blanco */
+    color: white;
+
     text-decoration: none;
 }
-
 
 footer a:hover {
     text-decoration: underline;
 }
 
-.Contenedor_formulario{
-    background-image: url('../Imagenes/Imagen\ de\ fondo.png'); /* O un color */
-    background-size: cover;
-    display: flex;            /* 1. Activamos el modo Flexbox */
-    justify-content: center;  /* 2. Centra de forma horizontal (izquierda a derecha) */
-    align-items: center;      /* 3. Centra de forma vertical (arriba a abajo) */
-    min-height: 100vh;        /* 4. Le damos altura a la sección (toda la pantalla) */
+.Ubicacion_consultorio_mapa {
+    border-radius: 15px;
 }
 
-.Contenedor_formulario form{
-    display: flex;            /* Activamos flex dentro del formulario */
-    flex-direction: column;   /* ¡Clave! Esto pone los ítems uno debajo del otro */
-    gap: 15px;                /* Crea espacio entre cada campo sin usar margin */
-    width: 900px;             /* Le damos un ancho para que no ocupe toda la pantalla */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); 
-    
-    /* 2. EL TRUCO: Desenfoca lo que está detrás del cuadro */
-    backdrop-filter: blur(10px); 
-    
-    /* 3. Estética opcional para que parezca un cuadro real */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 40px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+.derechoAutor {
+    text-align: center;
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
-.opcion_radio{
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.Contenedor_formulario {
+    min-height: 100vh;
+
     display: flex;
-    gap: 10px;
+    justify-content: center;
     align-items: center;
+
+    padding: 40px 20px;
+
+    background: linear-gradient(to bottom, #f7fbfc, #eef7f8);
+    background-image: url('../Imagenes/fondo-podologia-suave.png');
 }
 
-/* --- RESPONSIVE DESIGN (PARA CELULARES) --- */
+.Contenedor_formulario form {
+    width: 100%;
+    max-width: 900px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.opcion_radio {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+select {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d1d5db;
+
+    font-size: 16px;
+
+    background-color: white;
+
+    color: #374151;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+select:focus {
+
+    border-color: #57d4e5;
+
+    box-shadow: 0 0 0 4px rgba(87, 212, 229, 0.20);
+}
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d1d5db;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+
+    border-color: #57d4e5;
+
+    box-shadow: 0 0 0 4px rgba(87, 212, 229, 0.20);
+}
+
+button {
+
+    background-color: #57d4e5;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+
+    background-color: #3fc4d6;
+
+    transform: translateY(-2px);
+}
+
+.boton-turno-flotante {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background-color: #57d4e5;
+
+    color: white;
+
+    padding: 16px 22px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+
+    z-index: 999;
+
+    transition: 0.3s ease;
+}
+
+.boton-turno-flotante:hover {
+
+    background-color: #38c3d6;
+
+    transform: translateY(-4px) scale(1.03);
+}
+
+.boton-turno-flotante i {
+
+    font-size: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
 
-    /* Esto hace que el fondo verde cubra TODO de borde a borde */
-    .Contenedor_Perfil_profesional,
-    .Contenedor_Servicios,
-    .beneficios {
-        width: 100%;
-        display: block;
-        /* Cambiamos a block para que el contenido empuje el fondo hacia abajo */
-        padding: 50px 0;
-        overflow: hidden;
-        /* Evita que cosas raras se salgan por los costados */
-    }
-
-    /* 2. Arreglar el cuadro de Blanca (el que se ve mal en la foto) */
     .Perfil_profesional {
         flex-direction: column;
-        /* La foto arriba, el texto abajo */
-        align-items: center;
-        width: 90%;
-        margin: 0 auto;
-        /* Centra el cuadro cian en la pantalla */
-        padding: 20px;
-    }
 
-    .Perfil_profesional_texto {
-        width: 100%;
         text-align: center;
-        /* Centramos el texto para que no quede pegado a la derecha */
-        margin-top: 20px;
+
+        padding: 35px 25px;
     }
 
-    /* 3. Las imágenes en el celular deben ser más flexibles */
     .Perfil_profesional_img {
-        max-width: 200px;
-        height: auto;
+        width: 240px;
+        height: 240px;
     }
 
+    .Perfil_profesional_texto h2 {
+        font-size: 32px;
+    }
 
+    .Menu {
+        gap: 15px;
+    }
+
+    .Menu__link {
+        font-size: 14px;
+    }
+
+    .datos {
+        flex-direction: column;
+    }
+
+    .Contenedor_formulario form {
+        padding: 25px;
+    }
+
+    .boton-turno-flotante {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        padding: 14px 18px;
+
+        font-size: 14px;
+    }
 }

@@ -12,26 +12,50 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Limelight&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <header>
         <section class="banner">
-            <div>
 
-                <img src="Imagenes/logo.png" width="400">
+            <div class="banner-contenido">
+
+                <img src="Imagenes/logo.png" class="logo">
+
+                <div class="redes-superior">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
 
             </div>
+
         </section>
         <section class="Contenedor_menu">
             <nav>
                 <ul class="Menu">
 
+                    <li><a href="index.html" class="Menu__link">Inicio</a></li>
                     <li><a href="Paginas/pedirTurno.html" class="Menu__link">Turnos</a></li>
-                    <li><a href="#Sobre_Nosotros" class="Menu__link">Sobre nosotros</a></li>
+                    <li><a href="./Paginas/registro.html" class="Menu__link">Registarse</a></li>
+                    <li><a href="#Sobre_Nosotros" class="Menu__link">Conocé a Blanca</a></li>
                     <li><a href="#Contacto" class="Menu__link">Contactanos</a></li>
                     <li><a href="#Nuestros_Servicios" class="Menu__link">Nuestros servicios</a></li>
-                    <li><a href="#" class="Menu__link">Preguntas frecuentes</a></li>
 
                 </ul>
             </nav>
@@ -57,38 +81,60 @@
             </div>
 
         </section>
+        <section class="titulo-seccion">
+
+            <h2>Nuestros Servicios</h2>
+
+            <p>
+                Tratamientos profesionales y personalizados para el cuidado integral de tus pies.
+            </p>
+
+        </section>
         <section class="Contenedor_Servicios" id="Nuestros_Servicios">
 
-            <div class="cajaServicio">
-                <h2>Quiropodia Integral</h2>
-                <img src="Imagenes/Quiropodia_Integral.jpg">
-                <p>Tratamiento de afecciones comunes como durezas (queratosis), callos (helomas) y el correcto corte de
-                    uñas técnica y estéticamente.</p>
-            </div>
-            <div class="cajaServicio">
-                <h2>Tratamiento de Onicocriptosis</h2>
-                <img src="Imagenes/Tratamiento de Onicocriptosis.jpg">
-                <p>Abordaje especializado para uñas encarnadas, incluyendo técnicas para aliviar el dolor y evitar
-                    infecciones recurrentes.</p>
-            </div>
-            <div class="cajaServicio">
-                <h2>Abordaje de Onicomicosis</h2>
-                <img src="Imagenes/Abordaje de Onicomicosis.jpeg">
-                <p>Tratamiento y seguimiento de hongos en las uñas mediante métodos mecánicos y recomendaciones
-                    terapéuticas.</p>
-            </div>
-            <div class="cajaServicio">
-                <h2>Ortopodología y Biomecánica</h2>
-                <img src="Imagenes/Ortopodología y Biomecánica.webp">
-                <p>Realización de estudios de la marcha y confección de soportes plantares (plantillas) personalizados
-                    para corregir la postura.</p>
-            </div>
-            <div class="cajaServicio">
-                <h2>Pie Diabetico</h2>
-                <img src="Imagenes/Pie Diabetico.jpg">
-                <p>Evaluación de riesgo, curaciones y educación para la prevención de lesiones graves en pacientes con
-                    diabetes.</p>
-            </div>
+            <a href="Paginas/pedirTurno.html?motivo=Quiropodia" class="servicio-link">
+                <div class="cajaServicio">
+                    <h2>Quiropodia Integral</h2>
+                    <img src="Imagenes/Quiropodia_Integral.jpg">
+                    <p>Tratamiento de afecciones comunes como durezas (queratosis), callos (helomas) y el correcto corte
+                        de
+                        uñas técnica y estéticamente.</p>
+                </div>
+            </a>
+            <a href="Paginas/pedirTurno.html?motivo=uñas_encarnadas" class="servicio-link">
+                <div class="cajaServicio">
+                    <h2>Tratamiento de Onicocriptosis</h2>
+                    <img src="Imagenes/Tratamiento de Onicocriptosis.jpg">
+                    <p>Abordaje especializado para uñas encarnadas, incluyendo técnicas para aliviar el dolor y evitar
+                        infecciones recurrentes.</p>
+                </div>
+            </a>
+            <a href="Paginas/pedirTurno.html?motivo=hongos" class="servicio-link">
+                <div class="cajaServicio">
+                    <h2>Abordaje de Onicomicosis</h2>
+                    <img src="Imagenes/Abordaje de Onicomicosis.jpeg">
+                    <p>Tratamiento y seguimiento de hongos en las uñas mediante métodos mecánicos y recomendaciones
+                        terapéuticas.</p>
+                </div>
+            </a>
+            <a href="Paginas/pedirTurno.html?motivo=plantillas" class="servicio-link">
+                <div class="cajaServicio">
+                    <h2>Ortopodología y Biomecánica</h2>
+                    <img src="Imagenes/Ortopodología y Biomecánica.webp">
+                    <p>Realización de estudios de la marcha y confección de soportes plantares (plantillas)
+                        personalizados
+                        para corregir la postura.</p>
+                </div>
+            </a>
+            <a href="Paginas/pedirTurno.html?motivo=pie_diabetico" class="servicio-link">
+                <div class="cajaServicio">
+                    <h2>Pie Diabetico</h2>
+                    <img src="Imagenes/Pie Diabetico.jpg">
+                    <p>Evaluación de riesgo, curaciones y educación para la prevención de lesiones graves en pacientes
+                        con
+                        diabetes.</p>
+                </div>
+            </a>
 
         </section>
         <section class="beneficios">
@@ -124,18 +170,31 @@
 
                 <p>
 
-                    <i class="bi bi-whatsapp text-success" style="font-size: 2rem;"></i>
-                    <a href="https://wa.me/5491160120099" target="_blank" class="footer__link-wa">1160120099</a>
+                    <i class="fa-brands fa-whatsapp icono-red"></i>
+                    <a href="https://wa.me/5491160120099" target="_blank" class="footer__link-wa">whatsapp</a>
                 </p>
                 <p>
-                    <i class="bi bi-envelope"></i>
-                    <a href="mailto:blancaadiazherrera@gmail.com" target="_blank">blancaadiazherrera@gmail.com</a>
+                    <i class="fa-solid fa-envelope icono-red"></i>
+                    <a href="mailto:blancaadiazherrera@gmail.com" target="_blank">Correo electronico</a>
+                </p>
+                <p>
+                    <i class="fa-brands fa-facebook-f icono-red"></i>
+                    <a href="https://facebook.com" target="_blank">
+                        Facebook
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-youtube icono-red"></i>
+                    <a href="https://youtube.com" target="_blank">
+                        YouTube
+                    </a>
                 </p>
 
             </div>
             <div>
                 <h3>Horarios</h3>
-                <p>Lun a Vie: 09:00 - 12:00 y 15:00 - 18-00</p>
+                <p>Lun a Vie: 09:00 - 12:00 y 15:00 - 18:00</p>
                 <p>Sábados: 09:00 - 18:00</p>
             </div>
             </div>
@@ -146,6 +205,13 @@
             </div>
         </section>
     </footer>
+    <a href="Paginas/pedirTurno.html" class="boton-turno-flotante">
+
+        <i class="fa-solid fa-calendar-check"></i>
+
+        <span>Pedí tu turno</span>
+
+    </a>
 </body>
 
 </html>
