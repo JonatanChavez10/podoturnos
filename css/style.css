@@ -625,7 +625,29 @@ button:hover {
 
 @media (max-width: 768px) {
 
+    html,
+    body{
+        overflow-x: hidden;
+    }
+
+    .banner-contenido{
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+    .redes-superior{
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
     .Perfil_profesional {
+
         flex-direction: column;
 
         text-align: center;
@@ -634,28 +656,49 @@ button:hover {
     }
 
     .Perfil_profesional_img {
+
         width: 240px;
+
         height: 240px;
     }
 
     .Perfil_profesional_texto h2 {
+
+        font-size: 32px;
+    }
+
+    .titulo-seccion h2{
+
         font-size: 32px;
     }
 
     .Menu {
+
         gap: 15px;
     }
 
     .Menu__link {
+
         font-size: 14px;
     }
 
     .datos {
+
         flex-direction: column;
     }
 
     .Contenedor_formulario form {
+
+        width: 100%;
+
         padding: 25px;
+    }
+
+    .servicio-link{
+
+        display: block;
+
+        width: 100%;
     }
 
     .boton-turno-flotante {
