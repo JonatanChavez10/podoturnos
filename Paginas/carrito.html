@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Limelight&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Registro</title>
+    <title>Turnos</title>
 </head>
 
 <body>
@@ -50,47 +50,39 @@
                 <ul class="Menu">
 
                     <li><a href="../index.html" class="Menu__link">Inicio</a></li>
-                    <li><a href="pedirTurno.html" class="Menu__link">Turnos</a></li>
+                    <li><a href="./registro.html" class="Menu__link">Registarse</a></li>
                     <li><a href="#Contacto" class="Menu__link">Contactano</a></li>
                     <li><a href="../Paginas/productos.html" class="Menu__link">Nuestros productos</a></li>
                     <li><a href="../Paginas/carrito.html" class="Menu__link">Carrito</a></li>
                     <li><a href="../index.html#Sobre_Nosotros" class="Menu__link">Conocé a Blanca</a></li>
                     <li><a href="../index.html#Nuestros_Servicios" class="Menu__link">Nuestros servicios</a></li>
 
+
                 </ul>
             </nav>
         </section>
     </header>
     <main>
-        <section class="Contenedor_formulario">
-            <form method="post" action="https://formspree.io/f/xaqvjdea">
-                <input type="hidden" name="_redirect" value="https://jonatanchavez10.github.io/podoturnos/">
-                <label for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" required>
-                <label for="apellido">Apellido:</label><input type="text" id="apellido" name="apellido" required>
-                <label for="fechaNacimiento">Fecha de nacimiento:</label><input type="date" id="fechaNacimiento"
-                    name="fechaNacimiento" required>
-                <label for="telefono">Telefono:</label><input type="tel" id="telefono" name="telefono" required>
-                <label for="correo">Correo electronico:</label><input type="email" id="correo" name="correo" required>
-                <label for="direccion">Direccion:</label><input type="text" id="direccion" name="direccion" required>
-                <p>¿Es diabetica?</p>
-                <div class="opcion_radio">
+        <section class="contenedor-carrito">
+            <aside class="carrito-box">
+                <h3>🛒 Tu carrito (<span id="cantidad-carrito">0</span>)</h3>
 
-                    <label for="diabetes_si">SI</label><input type="radio" id="diabetes_si" name="diabetes" value="si"
-                        required>
+                <ul id="items-carrito" class="carrito-items">
+                    <!-- Los items del carrito se cargan desde JavaScript -->
+                </ul>
 
+                <div class="carrito-total">
+                    <span>Total:</span>
+                    <strong id="total-carrito">$0</strong>
                 </div>
-                <div class="opcion_radio">
 
-                    <label for="diabetes_no">NO</label><input type="radio" id="diabetes_no" name="diabetes" value="no"
-                        required>
-
+                <div class="carrito-acciones">
+                    <button id="btn-vaciar" class="btn-secundario">Vaciar</button>
+                    <button id="btn-pagar" class="btn">Pagar</button>
                 </div>
-                <label for="enfermedades">Alguna enfermedad:</label><textarea id="enfermedades" name="enfermedades"
-                    rows="5" cols="30"></textarea>
-                <input type="submit" name="enviar" value="Enviar">
-
-            </form>
+            </aside>
         </section>
+
 
     </main>
     <footer>
@@ -142,9 +134,10 @@
                 <p>&copy; 2026 Jonatan Chavez</p>
             </div>
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+         <script src="../js/carrito.js"></script>
     </footer>
-
-
+   
 </body>
 
 </html>
