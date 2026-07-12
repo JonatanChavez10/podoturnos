@@ -9,53 +9,77 @@ function actualizarCarrito() {
     if (carrito.length === 0) {
         listaCarrito.innerHTML = "<li class='carrito-vacio'>Tu carrito está vacío.</li>";
     } else {
-        for (let i = 0; i < carrito.length; i++) {
-            let producto = carrito[i];
 
+        carrito.forEach((producto, indice) => {
             let item = document.createElement("li");
             item.className = "carrito-item";
 
-            item.innerHTML =
-                "<span class='nombre-producto'>" + producto.title + "</span>" +
-                "<span class='carrito-precio'>$" + producto.price + "</span>" +
-                "<button class='btn-quitar' data-indice='" + i + "'>✕</button>";
+
+            item.innerHTML = `
+                <span class='nombre-producto'>${producto.title}</span>
+                ${producto.cantidad > 1 ? `<span class='carrito-cantidad'> x${producto.cantidad}</span>` : ""}
+                <span class='carrito-precio'>$${producto.price}</span>
+                <button class='btn-agregar' data-indice='${indice}'>+</button>
+                <button class='btn-quitar' data-indice='${indice}'>-</button>
+            `;
 
             listaCarrito.appendChild(item);
-        }
+        });
 
-        // Evento para los botones de quitar.
+
         let botonesQuitar = document.querySelectorAll(".btn-quitar");
-
-        for (let boton of botonesQuitar) {
+        botonesQuitar.forEach(boton => {
             boton.addEventListener("click", function () {
-                let indice = boton.getAttribute("data-indice");
+                let indice = this.getAttribute("data-indice");
                 quitarProducto(indice);
             });
-        }
+        });
+
+        let botonesAgregar = document.querySelectorAll(".btn-agregar");
+        botonesAgregar.forEach(boton => {
+            boton.addEventListener("click", function () {
+                let indice = this.getAttribute("data-indice");
+                sumarProducto(indice);
+            });
+        });
     }
 
-    totalTexto.textContent = "$" + totalCarrito();
-    cantidadTexto.textContent = carrito.length;
+    totalTexto.textContent = "$" + totalCarrito().toFixed(2);
 
+
+    let cantidadTotalArticulos = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+    cantidadTexto.textContent = cantidadTotalArticulos;
 }
+
 function totalCarrito() {
     let total = 0;
     carrito.forEach(producto => {
-        total += producto.price;
+
+        total += (producto.price * producto.cantidad);
     });
     return total;
 }
 
 function quitarProducto(indice) {
     let producto = carrito[indice];
-    carrito.splice(indice, 1);
-    localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
-    console.log("Producto eliminado del carrito:", producto);
+    if (producto.cantidad == 1) {
 
+        carrito.splice(indice, 1);
+
+    } else {
+        producto.cantidad--;
+    }
+
+    localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
     actualizarCarrito();
 }
 
-
+function sumarProducto(indice) {
+    let producto = carrito[indice];
+    producto.cantidad++;
+    localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
+    actualizarCarrito();
+}   
 
 function terminarCompra() {
     if (carrito.length === 0) {
@@ -68,7 +92,7 @@ function terminarCompra() {
         return;
     }
 
-    
+
     Swal.fire({
         icon: "success",
         title: "¡Gracias por tu compra!",
@@ -77,12 +101,12 @@ function terminarCompra() {
             "<small>El pago es solo una demostración, no se procesa ningún cobro.</small>",
         confirmButtonText: "Cerrar",
         confirmButtonColor: "#57d4e5"
-        
+
     });
     localStorage.removeItem(CLAVE_CARRITO);
     vaciarCarrito();
     actualizarCarrito();
-    
+
 }
 
 document.getElementById("btn-pagar").addEventListener("click", terminarCompra);
@@ -96,13 +120,12 @@ function vaciarCarrito() {
     console.log("Carrito vaciado");
 }
 
-function borrarBD(){
+function borrarBD() {
     localStorage.removeItem(CLAVE_CARRITO);
 }
 
 
 document.addEventListener("DOMContentLoaded", function () {
-        console.log("¡El evento DOMContentLoaded se disparó!"); 
-        carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO)) || [];
-        actualizarCarrito();
-    });
+    carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO)) || [];
+    actualizarCarrito();
+});

@@ -240,12 +240,13 @@ body {
     padding: 30px 20px 80px;
 }
 
-.contenedorProducto h1{
+.contenedorProducto h1 {
     text-align: center;
     font-size: 42px;
     color: #143b63;
     padding-top: 50px;
 }
+
 #productos {
     display: flex;
     flex-wrap: wrap;
@@ -271,8 +272,25 @@ body {
 }
 
 .producto {
-    border: 1px solid #ccc;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 5px;
+}
+
+.producto button {
+    margin-top: auto;
+}
+
+/*.producto h3 {
+    min-height: 80px; 
+}*/
+
+.producto h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Cantidad máxima de líneas que vas a permitir */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 #finalizarCompra {
@@ -281,23 +299,30 @@ body {
 }
 
 .contenedor-carrito {
-    display: flex;         /* Activa el modo flexible */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente (si el contenedor tiene altura) */
-    width: 100%;           /* Ocupa todo el ancho disponible */
-    padding: 30px;          /* Espacio interno */
+    display: flex;
+    /* Activa el modo flexible */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente (si el contenedor tiene altura) */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    padding: 30px;
+    /* Espacio interno */
 }
 
 .carrito-box {
     /* Aquí definimos un ancho máximo para que no se estire demasiado */
-    width: 90%; 
-    max-width: 800px; 
-    margin: 0 auto;       /* Técnica extra de respaldo para centrar bloques */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Técnica extra de respaldo para centrar bloques */
 }
 
 
 .nombre-producto {
-    flex: 1; /* Esto hace que el nombre ocupe todo el espacio sobrante */
+    flex: 1;
+    /* Esto hace que el nombre ocupe todo el espacio sobrante */
     font-size: 14px;
     color: #333;
 }
@@ -305,25 +330,37 @@ body {
 /* 1. EL CONTENEDOR DE LA LISTA (El ul) */
 .carrito-items {
     display: flex;
-    flex-direction: column; /* Apila los productos uno debajo del otro */
-    gap: 12px;              /* Espacio entre cada tarjeta */
-    list-style: none;       /* Quita los puntos de la lista */
-    padding: 30px;             /* Quita el margen izquierdo molesto */
+    flex-direction: column;
+    /* Apila los productos uno debajo del otro */
+    gap: 12px;
+    /* Espacio entre cada tarjeta */
+    list-style: none;
+    /* Quita los puntos de la lista */
+    padding: 30px;
+    /* Quita el margen izquierdo molesto */
     margin-bottom: 20px;
-    border: 1px solid #ddd;    /* Borde de la tarjeta */
-    border-radius: 12px;       /* Bordes redondeados */
+    border: 1px solid #ddd;
+    /* Borde de la tarjeta */
+    border-radius: 12px;
+    /* Bordes redondeados */
 }
 
 /* 2. CADA PRODUCTO INDIVIDUAL (El li / la tarjeta) */
 .carrito-item {
     display: flex;
-    justify-content: space-between; /* Separa nombre, precio y botón */
+    justify-content: space-between;
+    /* Separa nombre, precio y botón */
     align-items: center;
-    padding: 15px;             /* Aire interno */
-    border: 1px solid #ddd;    /* Borde de la tarjeta */
-    border-radius: 12px;       /* Bordes redondeados */
-    background-color: #fff;    /* Fondo blanco */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombrita suave */
+    padding: 15px;
+    /* Aire interno */
+    border: 1px solid #ddd;
+    /* Borde de la tarjeta */
+    border-radius: 12px;
+    /* Bordes redondeados */
+    background-color: #fff;
+    /* Fondo blanco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Sombrita suave */
 }
 
 /* 3. EL PRECIO (Para que quede alineado) */
@@ -331,10 +368,13 @@ body {
     font-weight: bold;
     min-width: 60px;
     text-align: right;
-    color: #143b63; /* Le puse el mismo azul de tus títulos para que combine */
+    color: #143b63;
+    /* Le puse el mismo azul de tus títulos para que combine */
 }
+
 .btn-quitar {
-    background-color: #ff4d4d; /* Un color rojo más amigable para borrar */
+    background-color: #ff4d4d;
+    /* Un color rojo más amigable para borrar */
     color: white;
     border: none;
     padding: 4px 8px;
@@ -342,6 +382,7 @@ body {
     cursor: pointer;
     font-size: 12px;
 }
+
 .titulo-seccion {
 
     text-align: center;
