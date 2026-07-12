@@ -383,6 +383,18 @@ body {
     font-size: 12px;
 }
 
+.btn-agregar{
+    background-color: #4CAF50;
+    /* Un color rojo más amigable para borrar */
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 5px;
+}
+
 .titulo-seccion {
 
     text-align: center;

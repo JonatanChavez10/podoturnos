@@ -1,31 +1,32 @@
-let carrito = [];
 const CLAVE_CARRITO = "carrito";
+// Cargamos la base de datos inmediatamente
+let carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO)) || [];
+
 let listaCarrito = document.getElementById("items-carrito");
 let totalTexto = document.getElementById("total-carrito");
 let cantidadTexto = document.getElementById("cantidad-carrito");
+
 function actualizarCarrito() {
+    if (!listaCarrito) return;
     listaCarrito.innerHTML = "";
 
     if (carrito.length === 0) {
         listaCarrito.innerHTML = "<li class='carrito-vacio'>Tu carrito está vacío.</li>";
     } else {
-
         carrito.forEach((producto, indice) => {
             let item = document.createElement("li");
             item.className = "carrito-item";
 
-
             item.innerHTML = `
                 <span class='nombre-producto'>${producto.title}</span>
                 ${producto.cantidad > 1 ? `<span class='carrito-cantidad'> x${producto.cantidad}</span>` : ""}
-                <span class='carrito-precio'>$${producto.price}</span>
+                <span class='carrito-precio'>$${producto.price.toFixed(2)}</span>
                 <button class='btn-agregar' data-indice='${indice}'>+</button>
                 <button class='btn-quitar' data-indice='${indice}'>-</button>
             `;
 
             listaCarrito.appendChild(item);
         });
-
 
         let botonesQuitar = document.querySelectorAll(".btn-quitar");
         botonesQuitar.forEach(boton => {
@@ -44,17 +45,17 @@ function actualizarCarrito() {
         });
     }
 
-    totalTexto.textContent = "$" + totalCarrito().toFixed(2);
+    if (totalTexto) totalTexto.textContent = "$" + totalCarrito().toFixed(2);
 
-
-    let cantidadTotalArticulos = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
-    cantidadTexto.textContent = cantidadTotalArticulos;
+    if (cantidadTexto) {
+        let cantidadTotalArticulos = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+        cantidadTexto.textContent = cantidadTotalArticulos;
+    }
 }
 
 function totalCarrito() {
     let total = 0;
     carrito.forEach(producto => {
-
         total += (producto.price * producto.cantidad);
     });
     return total;
@@ -63,13 +64,10 @@ function totalCarrito() {
 function quitarProducto(indice) {
     let producto = carrito[indice];
     if (producto.cantidad == 1) {
-
         carrito.splice(indice, 1);
-
     } else {
         producto.cantidad--;
     }
-
     localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
     actualizarCarrito();
 }
@@ -79,7 +77,7 @@ function sumarProducto(indice) {
     producto.cantidad++;
     localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
     actualizarCarrito();
-}   
+}
 
 function terminarCompra() {
     if (carrito.length === 0) {
@@ -92,31 +90,23 @@ function terminarCompra() {
         return;
     }
 
-
     Swal.fire({
         icon: "success",
         title: "¡Gracias por tu compra!",
         html:
-            "Total a pagar: <strong>$" + totalCarrito() + "</strong><br><br>" +
+            "Total a pagar: <strong>$" + totalCarrito().toFixed(2) + "</strong><br><br>" +
             "<small>El pago es solo una demostración, no se procesa ningún cobro.</small>",
         confirmButtonText: "Cerrar",
         confirmButtonColor: "#57d4e5"
-
     });
-    localStorage.removeItem(CLAVE_CARRITO);
+    
     vaciarCarrito();
-    actualizarCarrito();
-
 }
 
-document.getElementById("btn-pagar").addEventListener("click", terminarCompra);
-document.getElementById("btn-vaciar").addEventListener("click", function () {
-    vaciarCarrito();
-    actualizarCarrito();
-});
 function vaciarCarrito() {
     carrito = [];
     borrarBD();
+    actualizarCarrito();
     console.log("Carrito vaciado");
 }
 
@@ -124,8 +114,13 @@ function borrarBD() {
     localStorage.removeItem(CLAVE_CARRITO);
 }
 
-
+// Inicialización de eventos al cargar el DOM
 document.addEventListener("DOMContentLoaded", function () {
-    carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO)) || [];
     actualizarCarrito();
+    
+    // Conectamos los botones principales
+    document.getElementById("btn-pagar")?.addEventListener("click", terminarCompra);
+    document.getElementById("btn-vaciar")?.addEventListener("click", function () {
+        vaciarCarrito();
+    });
 });
